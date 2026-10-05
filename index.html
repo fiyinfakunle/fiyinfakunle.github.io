@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiyin Fakunle</title>
+<meta name="description" content="Fiyin Fakunle — strategist, community builder and experience designer in London.">
+<meta property="og:title" content="Fiyin Fakunle">
+<meta property="og:description" content="Strategy, communities and events that bring the right people together. London.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#36050a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 120'%3E%3Crect width='140' height='120' rx='20' fill='%2336050a'/%3E%3Cg fill='none' stroke='%23f1dcb4' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M68 62 C60 46 66 22 98 6 C96 26 90 48 68 62 Z'/%3E%3Cpath d='M68 62 C84 50 106 52 120 62 C122 68 112 72 104 66 C92 70 80 68 68 62 Z'/%3E%3Cpath d='M68 62 C78 74 84 92 76 114 C64 104 60 82 68 62 Z'/%3E%3Cpath d='M68 62 C52 52 34 46 18 50 C14 56 6 60 4 64 C10 60 18 62 26 70 C38 78 54 72 68 62 Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Hanken+Grotesk:wght@400;500&display=swap">
+<style>
+/* Layout: one narrow left-aligned column on the FF on Purpose burgundy, like a page from a notebook. Single deliberate dark look. */
+:root {
+  --ground: #36050a;      /* FF burgundy */
+  --ground-2: #42090f;
+  --cream: #f1dcb4;       /* FF cream */
+  --cream-soft: #c9ae8f;
+  --rule: #5c2027;
+  --display: "Cormorant", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--cream);
+  font: 400 1rem/1.65 var(--body);
+  padding-inline: 24px;
+  padding-block: clamp(3rem, 9vw, 7rem) 4rem;
+}
+main { max-width: 38rem; margin: 0 auto; display: flex; flex-direction: column; gap: clamp(3.5rem, 8vw, 5.5rem); }
+a { color: var(--cream); text-decoration: underline; text-decoration-color: var(--cream-soft); text-underline-offset: 3px; text-decoration-thickness: 1px; transition: text-decoration-color .2s; }
+a:hover { text-decoration-color: var(--cream); }
+a:focus-visible, button:focus-visible { outline: 1px solid var(--cream); outline-offset: 3px; }
+::selection { background: var(--cream); color: var(--ground); }
+
+.mark { width: 64px; height: auto; display: block; color: var(--cream); }
+header { display: flex; flex-direction: column; gap: 1.75rem; }
+h1 {
+  font: 300 clamp(3rem, 11vw, 5rem)/0.95 var(--display);
+  letter-spacing: -0.01em; margin: 0; text-wrap: balance;
+}
+.lede {
+  font: 300 clamp(1.4rem, 4vw, 1.75rem)/1.35 var(--display);
+  margin: 0; max-width: 32rem; text-wrap: pretty;
+}
+.lede em { font-style: italic; }
+.where { color: var(--cream-soft); font-size: .875rem; margin: 0; }
+
+h2 {
+  font: 500 .75rem/1 var(--body); letter-spacing: .16em; text-transform: uppercase;
+  color: var(--cream-soft); margin: 0 0 1.5rem;
+}
+p { margin: 0; }
+.prose { display: flex; flex-direction: column; gap: 1rem; color: var(--cream); max-width: 34rem; }
+.prose p { text-wrap: pretty; }
+
+.list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+.list li {
+  display: grid; grid-template-columns: 6.5rem 1fr; gap: 0 1.25rem;
+  padding-block: 1.1rem; border-bottom: 1px solid var(--rule);
+}
+.list .when { color: var(--cream-soft); font-size: .8125rem; padding-top: .3rem; font-variant-numeric: tabular-nums; }
+.list .what { min-width: 0; display: flex; flex-direction: column; gap: .3rem; }
+.list h3 { font: 400 1.35rem/1.25 var(--display); margin: 0; }
+.list h3 span { font-style: italic; color: var(--cream-soft); }
+.list p { color: var(--cream-soft); font-size: .9375rem; }
+
+.notes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2rem; }
+.notes li { font: 300 clamp(1.5rem, 4.5vw, 2rem)/1.25 var(--display); text-wrap: balance; }
+.notes li:nth-child(2) { padding-left: clamp(1.5rem, 12vw, 6rem); }
+.notes li:nth-child(3) { padding-left: clamp(.75rem, 6vw, 3rem); }
+.notes-src { margin-top: 1.5rem; font-size: .8125rem; color: var(--cream-soft); }
+
+.contact { display: flex; flex-direction: column; gap: .6rem; }
+.contact .row { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem 1rem; }
+.contact .label { width: 6.5rem; color: var(--cream-soft); font-size: .8125rem; }
+.contact .val { font: 400 1.3rem/1.3 var(--display); min-width: 0; overflow-wrap: anywhere; }
+.copy {
+  font: 500 .6875rem/1 var(--body); letter-spacing: .12em; text-transform: uppercase;
+  background: none; border: 1px solid var(--rule); color: var(--cream-soft);
+  padding: .4rem .6rem; border-radius: 2px; cursor: pointer;
+}
+.copy:hover { color: var(--cream); border-color: var(--cream-soft); }
+
+footer { display: flex; align-items: flex-end; gap: .5rem; color: var(--cream-soft); font-size: .8125rem; }
+footer .mark { width: 40px; }
+
+@media (max-width: 480px) {
+  .list li { grid-template-columns: 1fr; gap: .25rem; }
+  .list .when { padding-top: 0; }
+  .contact .label { width: 100%; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .mark path { stroke-dasharray: 600; stroke-dashoffset: 0; animation: draw 2.4s ease-out both; }
+  @keyframes draw { from { stroke-dashoffset: 600; } to { stroke-dashoffset: 0; } }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="flower" viewBox="0 0 140 120">
+    <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M68 62 C60 46 66 22 98 6 C96 26 90 48 68 62 Z"/>
+      <path d="M68 62 C84 50 106 52 120 62 C122 68 112 72 104 66 C92 70 80 68 68 62 Z"/>
+      <path d="M68 62 C78 74 84 92 76 114 C64 104 60 82 68 62 Z"/>
+      <path d="M68 62 C52 52 34 46 18 50 C14 56 6 60 4 64 C10 60 18 62 26 70 C38 78 54 72 68 62 Z"/>
+    </g>
+  </symbol>
+</svg>
+
+<main>
+  <header>
+    <svg class="mark" viewBox="0 0 140 120" role="img" aria-label="Line drawing of a flower"><use href="#flower"/></svg>
+    <h1>Fiyin Fakunle</h1>
+    <p class="lede">I design the experiences people want to belong to. Strategy, communities and events that bring the <em>right</em> people together and give them a reason to stay.</p>
+    <p class="where">Senior Consultant at Deloitte · Founder of Hz · London</p>
+  </header>
+
+  <section aria-labelledby="about">
+    <h2 id="about">About</h2>
+    <div class="prose">
+      <p>By day I'm a project manager in Deloitte's public sector practice, running discovery, roadmaps and stakeholder engagement for large digital transformation services. Most of that work comes down to the same thing: finding the people a service is meant for and making sure they're actually heard.</p>
+      <p>Outside of that I build communities. I started Hz, an invite-only group for people with niche taste in music, and I advise founders on how to launch with a real community behind them.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="work">
+    <h2 id="work">Selected work</h2>
+    <ul class="list">
+      <li>
+        <span class="when">2026</span>
+        <div class="what">
+          <h3>Security &amp; Justice Hackathon <span>Deloitte</span></h3>
+          <p>Lead organiser of the firm's first hackathon on public sector security and justice. Built the brand from scratch and brought 34 participants from engineering, design and analysis together for a day.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2025–26</span>
+        <div class="what">
+          <h3>Community &amp; Partnerships Lead <span>Deloitte</span></h3>
+          <p>Grew membership by 168% in a year. Co-ran a Claude Code hackathon where 10 global teams each shipped a prototype and two made it onto a live product roadmap.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2023–26</span>
+        <div class="what">
+          <h3>Project Manager / Senior Consultant <span>Deloitte</span></h3>
+          <p>Led discovery across 60+ customer journeys for a service used by 100,000+ people. Reached 20,000 of its most vulnerable users and helped bring the MVP in six weeks early.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2026–</span>
+        <div class="what">
+          <h3>Hz <span>Founder</span></h3>
+          <p>An invite-only music community that grew from an idea to 70 members. So far we've gone to more than 37 events together. I design everything, from the identity to the monthly calendar.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2026–</span>
+        <div class="what">
+          <h3>Go-to-market advisory <span>Independent</span></h3>
+          <p>Launch community for <strong>LAAM</strong>, a thinking tool. Brand, funnel and venues for <strong>Last Last</strong>, hall-party nights for the Afro-diaspora 30+ crowd. A guest experience blueprint for <strong>Grab-a-Plate</strong>, a supper club.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="notes">
+    <h2 id="notes">Writing &amp; podcast</h2>
+    <ul class="notes">
+      <li>Sanity is an uncommon currency.</li>
+      <li>We've built walls that eat away at our humanity.</li>
+      <li>The art is a byproduct.</li>
+    </ul>
+    <p class="notes-src">Read more on <a href="https://substack.com/@faksfiyin/" rel="noopener">my Substack</a>, or listen to <a href="https://open.spotify.com/show/0E2U3MXBBMluMA3aG0IoYF" rel="noopener">my podcast on Spotify</a>.</p>
+  </section>
+
+  <section aria-labelledby="before">
+    <h2 id="before">Before</h2>
+    <ul class="list">
+      <li>
+        <span class="when">2021, 2022</span>
+        <div class="what">
+          <h3>Equity Research Analyst <span>Brown Advisory</span></h3>
+          <p>Researched how the Digital Markets Act and Digital Services Act affect Big Tech, and provided investment recommendations for the Global Leaders Fund.</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2019–23</span>
+        <div class="what">
+          <h3>LLB (Hons) Law <span>University of Aberdeen</span></h3>
+          <p>Law with English Law. Graduated with 77%.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="say-hello">
+    <h2 id="say-hello">Say hello</h2>
+    <div class="contact">
+      <div class="row">
+        <span class="label">Email</span>
+        <a class="val" id="email" href="mailto:fiyinfakunle@gmail.com">fiyinfakunle@gmail.com</a>
+        <button class="copy" id="copy-email" type="button">Copy</button>
+      </div>
+      <div class="row">
+        <span class="label">LinkedIn</span>
+        <a class="val" href="https://www.linkedin.com/in/fiyin-fakunle-1a046b165/" rel="noopener">fiyin-fakunle</a>
+      </div>
+      <div class="row">
+        <span class="label">Substack</span>
+        <a class="val" href="https://substack.com/@faksfiyin/" rel="noopener">@faksfiyin</a>
+      </div>
+      <div class="row">
+        <span class="label">Podcast</span>
+        <a class="val" href="https://open.spotify.com/show/0E2U3MXBBMluMA3aG0IoYF" rel="noopener">Listen on Spotify</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <svg class="mark" viewBox="0 0 140 120" aria-hidden="true"><use href="#flower"/></svg>
+    <span>FF · London</span>
+  </footer>
+</main>
+
+<script>
+document.getElementById('copy-email').addEventListener('click', function () {
+  var btn = this, text = 'fiyinfakunle@gmail.com';
+  function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = 'Copy'; }, 1600); }
+  function fallback() {
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('email'));
+    var s = getSelection(); s.removeAllRanges(); s.addRange(r); done('Selected');
+  }
+  try { navigator.clipboard.writeText(text).then(function () { done('Copied'); }, fallback); }
+  catch (e) { fallback(); }
+});
+</script>
+</body>
+</html>
