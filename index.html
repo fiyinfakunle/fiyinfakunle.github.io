@@ -9,7 +9,7 @@
 <meta property="og:description" content="Strategy, communities and events that bring the right people together. London.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#36050a">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 120'%3E%3Crect width='140' height='120' rx='20' fill='%2336050a'/%3E%3Cg fill='none' stroke='%23f1dcb4' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M68 62 C60 46 66 22 98 6 C96 26 90 48 68 62 Z'/%3E%3Cpath d='M68 62 C84 50 106 52 120 62 C122 68 112 72 104 66 C92 70 80 68 68 62 Z'/%3E%3Cpath d='M68 62 C78 74 84 92 76 114 C64 104 60 82 68 62 Z'/%3E%3Cpath d='M68 62 C52 52 34 46 18 50 C14 56 6 60 4 64 C10 60 18 62 26 70 C38 78 54 72 68 62 Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 120'%3E%3Crect width='140' height='120' rx='20' fill='%2336050a'/%3E%3Cg transform='translate(31 23) scale(0.62)' fill='none' stroke='%23f1dcb4' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M68 62 C60 46 66 22 98 6 C96 26 90 48 68 62 Z'/%3E%3Cpath d='M68 62 C84 50 106 52 120 62 C122 68 112 72 104 66 C92 70 80 68 68 62 Z'/%3E%3Cpath d='M68 62 C78 74 84 92 76 114 C64 104 60 82 68 62 Z'/%3E%3Cpath d='M68 62 C52 52 34 46 18 50 C14 56 6 60 4 64 C10 60 18 62 26 70 C38 78 54 72 68 62 Z'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;1,300;1,400&family=Hanken+Grotesk:wght@400;500&display=swap">
@@ -48,6 +48,16 @@ h1 {
   letter-spacing: -0.01em; margin: 0; text-wrap: balance;
 }
 .where { color: var(--cream-soft); font-size: .875rem; margin: 0; }
+.icons { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; margin-top: -.5rem; }
+.icon {
+  display: inline-grid; place-items: center; width: 2.5rem; height: 2.5rem;
+  border: 1px solid var(--rule); border-radius: 50%; background: none; padding: 0;
+  color: var(--cream-soft); cursor: pointer; transition: color .2s, border-color .2s;
+}
+.icon:hover { color: var(--cream); border-color: var(--cream-soft); }
+.icon:focus-visible { outline: 1px solid var(--cream); outline-offset: 3px; }
+.icon svg { width: 1.15rem; height: 1.15rem; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.icon-status { font-size: .8125rem; color: var(--cream-soft); }
 
 h2 {
   font: 500 .75rem/1 var(--body); letter-spacing: .16em; text-transform: uppercase;
@@ -69,11 +79,13 @@ p { margin: 0; }
 .list h3 { font: 400 1.35rem/1.25 var(--display); margin: 0; }
 .list h3 span { font-style: italic; color: var(--cream-soft); }
 .list p { color: var(--cream-soft); font-size: .9375rem; }
+.roles { display: flex; flex-direction: column; gap: 1.1rem; margin-top: .6rem; }
+.role { display: flex; flex-direction: column; gap: .25rem; min-width: 0; }
+.role h4 { font: 400 1.15rem/1.3 var(--display); margin: 0; }
 
 .notes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2rem; }
 .notes li { font: 300 clamp(1.5rem, 4.5vw, 2rem)/1.25 var(--display); text-wrap: balance; }
 .notes li:nth-child(2) { padding-left: clamp(1.5rem, 12vw, 6rem); }
-.notes li:nth-child(3) { padding-left: clamp(.75rem, 6vw, 3rem); }
 .notes-src { margin-top: 1.5rem; font-size: .8125rem; color: var(--cream-soft); }
 
 .contact { display: flex; flex-direction: column; gap: .6rem; }
@@ -118,13 +130,28 @@ footer .mark { width: 40px; }
     <svg class="mark" viewBox="0 0 140 120" role="img" aria-label="Line drawing of a flower"><use href="#flower"/></svg>
     <h1>Fiyin Fakunle</h1>
     <p class="where">Project Manager @ Deloitte - Founder of Hz - Writer | London</p>
+    <div class="icons">
+      <a class="icon" href="https://www.linkedin.com/in/fiyin-fakunle-1a046b165/" rel="noopener" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 11v6M8 7.6v.1M12 17v-6M12 13.5c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5V17"/></svg>
+      </a>
+      <button class="icon" id="copy-email-icon" type="button" aria-label="Copy email address" title="Copy email: fiyinfakunle@gmail.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>
+      </button>
+      <a class="icon" href="https://substack.com/@faksfiyin/" rel="noopener" target="_blank" aria-label="Substack" title="Substack">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14M5 8h14M5 12h14v8l-7-4-7 4z"/></svg>
+      </a>
+      <a class="icon" href="https://docs.google.com/document/d/1XXkXfUPJ_tP5ooQzUA1eWX9FLhwyF8eB4c-w93gIgDI/edit?usp=sharing" rel="noopener" target="_blank" aria-label="CV" title="CV">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 15.5h6M9 8.5h2.5"/></svg>
+      </a>
+      <span class="icon-status" id="icon-status" aria-live="polite"></span>
+    </div>
   </header>
 
   <section aria-labelledby="about">
     <h2 id="about">About</h2>
     <div class="prose">
-      <p>By day, I am a project manager at Deloitte Digital in the Public Sector account. My work sits in between: Strategic planning activities (developing the ‘North-star’ and setting up the processes required to drive that success), Product/service discovery work (going from 0 - solution discovery) and Large-scale digital transformation deliveries (working in deep collaboration with tech, operations, policy teams).</p>
-      <p>Outside of that I build communities and share reflections on work, creativity and connection. I started Hz, an invite-only group for people with niche taste in music, and I advise founders on how to launch with a real community behind them.</p>
+      <p>At Deloitte, my work sits in between: Programme/Project Strategy Development - Solution Discovery - Cross-functional digital service delivery - Community Development.</p>
+      <p>Outside of that I build communities and share written reflections on work, creativity and connection. Most recently, I started Hz, an invite-only group for people with niche taste in music, and I advise founders on how to launch with a real community behind them.</p>
       <p class="reading">Currently reading · <em>May Contain Lies</em> by Alex Edmans</p>
     </div>
   </section>
@@ -133,24 +160,23 @@ footer .mark { width: 40px; }
     <h2 id="work">Experience</h2>
     <ul class="list">
       <li>
-        <span class="when">2026</span>
+        <span class="when">2023–</span>
         <div class="what">
-          <h3>Security &amp; Justice Hackathon <span>Deloitte</span></h3>
-          <p>Lead organiser of the firm's inaugural Security and Justice (Public Sector) hackathon. Brought 34 participants from engineering, design and product together for two days to innovate and connect. Key responsibilities include: logistics, outreach and engagement strategy, event experience design and senior stakeholder management.</p>
-        </div>
-      </li>
-      <li>
-        <span class="when">2025–26</span>
-        <div class="what">
-          <h3>Community &amp; Partnerships Lead <span>Deloitte</span></h3>
-          <p>Grew membership by 168% in a year. Co-ran a Claude Code hackathon where 10 global teams each shipped a prototype and two made it onto a live product roadmap.</p>
-        </div>
-      </li>
-      <li>
-        <span class="when">2023–26</span>
-        <div class="what">
-          <h3>Project Manager / Senior Consultant <span>Deloitte</span></h3>
-          <p>Led discovery across 60+ customer journeys for a service used by 100,000+ people. Reached 20,000 of its most vulnerable users and helped bring the MVP in six weeks early.</p>
+          <h3>Senior Consultant <span>Deloitte</span></h3>
+          <div class="roles">
+            <div class="role">
+              <h4>Project Manager</h4>
+              <p>Led discovery across 60+ customer journeys for a service used by 100,000+ people. Reached 20,000 of its most vulnerable users and helped bring the MVP in six weeks early.</p>
+            </div>
+            <div class="role">
+              <h4>Community &amp; Partnerships Lead</h4>
+              <p>Grew membership by 168% in a year. Co-ran a Claude Code hackathon where 10 global teams each shipped a prototype and two made it onto a live product roadmap.</p>
+            </div>
+            <div class="role">
+              <h4>Security &amp; Justice Hackathon Organiser</h4>
+              <p>Lead organiser of the firm's inaugural Security and Justice (Public Sector) hackathon. Brought 34 participants from engineering, design and product together for two days to innovate and connect. Key responsibilities include: logistics, outreach and engagement strategy, event experience design and senior stakeholder management.</p>
+            </div>
+          </div>
         </div>
       </li>
       <li>
@@ -180,11 +206,10 @@ footer .mark { width: 40px; }
   <section aria-labelledby="notes">
     <h2 id="notes">Writing &amp; podcast</h2>
     <ul class="notes">
-      <li>Sanity is an uncommon currency.</li>
-      <li>We've built walls that eat away at our humanity.</li>
-      <li>The art is a byproduct.</li>
+      <li>“We've built walls that eat away at our humanity.”</li>
+      <li>“The art is a byproduct.”</li>
     </ul>
-    <p class="notes-src">Read more on <a href="https://substack.com/@faksfiyin/" rel="noopener">my Substack</a>, or listen to <a href="https://open.spotify.com/show/0E2U3MXBBMluMA3aG0IoYF" rel="noopener">my podcast on Spotify</a>.</p>
+    <p class="notes-src">Read more on <a href="https://substack.com/@faksfiyin/" rel="noopener">my Substack</a> and <a href="https://www.linkedin.com/in/fiyin-fakunle-1a046b165/" rel="noopener">LinkedIn</a>, or listen to <a href="https://open.spotify.com/show/0E2U3MXBBMluMA3aG0IoYF" rel="noopener">my podcast on Spotify</a>.</p>
   </section>
 
   <section aria-labelledby="education">
@@ -194,7 +219,7 @@ footer .mark { width: 40px; }
         <span class="when">2019–23</span>
         <div class="what">
           <h3>LLB (Hons) Law <span>University of Aberdeen</span></h3>
-          <p>Law with English Law (77%)</p>
+          <p>Law with English Law</p>
         </div>
       </li>
     </ul>
@@ -239,6 +264,12 @@ document.getElementById('copy-email').addEventListener('click', function () {
   }
   try { navigator.clipboard.writeText(text).then(function () { done('Copied'); }, fallback); }
   catch (e) { fallback(); }
+});
+document.getElementById('copy-email-icon').addEventListener('click', function () {
+  var status = document.getElementById('icon-status'), text = 'fiyinfakunle@gmail.com';
+  function show(msg) { status.textContent = msg; clearTimeout(show.t); show.t = setTimeout(function () { status.textContent = ''; }, 2400); }
+  try { navigator.clipboard.writeText(text).then(function () { show('Email copied'); }, function () { show(text); }); }
+  catch (e) { show(text); }
 });
 </script>
 </body>
